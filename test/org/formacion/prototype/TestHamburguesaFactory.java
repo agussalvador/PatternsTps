@@ -27,20 +27,21 @@ public class TestHamburguesaFactory {
 	public void test_royal_si_cebolla() {
 		// queremos simplificar pedir esta hamburguesa !!
 		
-		Hamburguesa royaSinCebolla = new HamburguesaFactory()
+		/*Hamburguesa royaSinCebolla = new HamburguesaFactory()
 				                              .setCarne(Carne.VACUNO)
 				                              .setSize(Size.GRANDE)
 				                              .setPan(Pan.NORMAL)
 				                              .addExtra(Extra.QUESO)
-				                              .crea();
+				                              .crea();*/
+		Hamburguesa royalSinCebolla = new HamburguesaFactory().copy(HamburguesaFactory.royal()).removeExtra(Extra.CEBOLLA).crea();
 
-		assertEquals(Carne.VACUNO, royaSinCebolla.getCarne());
-		assertEquals(Size.GRANDE, royaSinCebolla.getSize());
-		assertEquals(Pan.NORMAL, royaSinCebolla.getPan());
-		assertFalse(royaSinCebolla.getExtras().contains(Extra.CEBOLLA));
-		assertTrue(royaSinCebolla.getExtras().contains(Extra.QUESO));
-		assertFalse(royaSinCebolla.getExtras().contains(Extra.PEPINO));
-		assertFalse(royaSinCebolla.getExtras().contains(Extra.MAYONESA));
+		assertEquals(Carne.VACUNO, royalSinCebolla.getCarne());
+		assertEquals(Size.GRANDE, royalSinCebolla.getSize());
+		assertEquals(Pan.NORMAL, royalSinCebolla.getPan());
+		assertFalse(royalSinCebolla.getExtras().contains(Extra.CEBOLLA));
+		assertTrue(royalSinCebolla.getExtras().contains(Extra.QUESO));
+		assertFalse(royalSinCebolla.getExtras().contains(Extra.PEPINO));
+		assertFalse(royalSinCebolla.getExtras().contains(Extra.MAYONESA));
 		
 	}
 }

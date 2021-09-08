@@ -44,8 +44,6 @@ public class HamburguesaFactory {
 		return this;
 	}
 
-
-
 	// -- hamburguesas de la carta
 	public static Hamburguesa royal() {
 		return new Hamburguesa ( Carne.VACUNO, Size.GRANDE, Pan.NORMAL, Extra.CEBOLLA, Extra.QUESO);
@@ -55,5 +53,13 @@ public class HamburguesaFactory {
 		return new Hamburguesa ( Carne.VACUNO, Size.EXTRA_GRANDE, Pan.NORMAL, Extra.CEBOLLA, Extra.HUEVO);
 	}
 
+	//Metodo que copia una hamburguesa y completa los campos del Hamburguesa Factory
+    public HamburguesaFactory copy(Hamburguesa hamburguesa){
+        this.carne = hamburguesa.getCarne();
+        this.size = hamburguesa.getSize();
+        this.pan = hamburguesa.getPan();
+        this.extras = new ArrayList<Extra>(hamburguesa.getExtras());
+        return this;
+    }
 
 }
