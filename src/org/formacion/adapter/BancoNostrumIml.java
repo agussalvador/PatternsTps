@@ -1,4 +1,4 @@
-package org.formacion;
+package org.formacion.adapter;
 
 import java.util.HashMap;
 import java.util.Map;

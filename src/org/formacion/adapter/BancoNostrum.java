@@ -1,4 +1,4 @@
-package org.formacion;
+package org.formacion.adapter;
 
 public interface BancoNostrum {
 

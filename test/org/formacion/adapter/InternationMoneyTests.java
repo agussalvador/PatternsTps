@@ -1,4 +1,4 @@
-package org.formacion;
+package org.formacion.adapter;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -7,11 +7,11 @@ import org.junit.Test;
 public class InternationMoneyTests {
 
 	private InternationalMoneyOrganization servicio;
-	
+
 	@Before
 	public void init() {
 		// cambia este null por una referencia al adapter que has creado
-		servicio = null;
+		servicio = new InternationalMoneyAdapter();
 	}
 	
 	@Test

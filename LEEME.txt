@@ -1,3 +1,4 @@
+///// PROTOTYPE
 Nuestro producto tiene dos clases:
 Hamburguesa : que representa ... hamburguesas.
 Cada hamburguesa esta definida por una serie de caracteristicas (pan, carne, extras ...) que se establecen en su constructor.
